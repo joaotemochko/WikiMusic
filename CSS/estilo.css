@@ -1,0 +1,156 @@
+
+html{
+    overflow-y:scroll;
+}
+.logocontainer {
+    margin: 30px -100px 0px -100px;
+    width: available;
+    background-color: #0f0f0f;
+}
+.logocontainer img{
+    width: 250px;
+    height: 200px;
+    margin: 20px 0px 0px 100px;	
+}
+#slogan {
+    font-family: "Arial Narrow", Verdana, sans-serif;
+    font-size: 115%;
+    color: #dbdbdb;
+    margin: 0px 0px 10px 100px;	
+}
+body{
+    margin:60px 100px 0 100px; 
+    padding:0; 
+    font-size:130%; 
+    font-family:Georgia, "Times New Roman", Times, serif;
+    color: dimgrey;
+    background-color:#232323;
+    text-align:justify;
+}
+#container{
+    padding:30px 0; 
+    clear:both;
+    width: available;
+    background-color: #dbdbdb;
+    margin: 30px -100px 0px -100px;	
+}
+#titulo{
+    margin: 0px 0px 20px 100px;
+    padding:0; 
+    font-size:2em;
+    font-weight:bold;
+    line-height:normal;
+    text-transform: capitalize;
+}
+#subtitulo{
+    margin: 0px 0px 20px 100px;
+    padding:0; 
+    font-size:1em;
+    font-weight:bold;
+    line-height:normal;
+    text-transform: capitalize;
+}
+#container article{
+    margin: 0px 0px 50px 0px;
+    padding:0; 
+}
+#paragrafo {
+    margin: 0px 0px 25px 100px;
+    max-width: 940px;
+}
+#referencia {
+    margin: 0px 0px 15px 100px;
+    font-size: 75%;
+}
+footer{
+    color: #dbdbdb; 
+    font-family: Verdana, sans-serif;
+    font-size: 75%; 
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: #dbdbdb; 
+}
+
+#linkartistas {
+    font-size: 75%;
+    color: #318aca;
+    font-family: Verdana, sans-serif;
+    text-align: right;
+    max-width: 940px;
+}
+#artista {
+    margin: 0px 0px 15px 0px;
+    float: left; 
+}
+#artista img {
+    margin: 0px 0px 0px 100px;
+    width: 300px; 
+    height: 200px;
+}
+#artista figcaption {
+    font-family: Verdana, sans-serif;
+    font-size: 70%;
+    margin: 0px 0px 0px 100px;
+}
+#container h3{
+    margin: 0px 0px 20px 100px;
+    padding:0; 
+    font-size: 100%;
+    font-weight:bold;
+    line-height:normal;
+    text-transform: capitalize;
+}
+#biografia {
+    margin: 0px 0px 15px 430px;
+    max-width: 650px;
+}
+#linkalbuns {
+    font-family: Verdana, sans-serif;
+    font-size: 75%;
+    text-align: right;
+    max-width: 940px;
+}
+#faleconosco {
+    color: lightgray;
+}
+#datahora {
+    float:right; 
+    text-align:center; 
+    border:none; 
+    color: whitesmoke;
+    background-color:#232323;
+}
+
+#publicidade {
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+}
+#publicidade img {
+    padding: 0px 0px 0px 0px;
+    width: 600px;
+    height: 600px;
+}
+
+#botaoincluir{
+    float:right; 
+    margin-top:-35px; 
+    margin-right:100px;    
+}
+
+#listDados{
+    display:block; 
+    margin:10px 100px 10px 100px;
+}
+
+#form{
+    display:none; 
+    margin:20px 100px 20px 100px;
+}
+
+
+
+
+

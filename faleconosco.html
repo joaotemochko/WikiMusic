@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>WikiMusic</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css" type="text/css" media="all">
+        <script src="js/jsnativo.js"></script>
+</head>
+
+<body onload="atualizaHora()">
+        <!-- Cabeçalho-->
+        <figure class="logocontainer">
+            
+            <a href="index.html"><img src="img/logo_wikimusic.jpg" alt="logo"></a>
+            <!-- As cores usadas são:
+                    Azul Claro: #58bfee
+                    Azul Escuro: #318aca
+                    Preto: #ofofof
+                    Prata: #dbdbdb
+            -->
+            <figcaption id="slogan">Música para todos os estilos</figcaption>
+        </figure>
+        
+        <form id="faleconosco" name="faleconosco" method="POST" action="mailto:dcgribeiro@hotmail.com">
+            <h2> Quer saber mais? Quer contribuir? Escreva-nos!</h2>
+            
+            <fieldset name="dadospessoais" form="faleconosco">
+                <legend>Dados Pessoais</legend>
+                <p><input type="text" id="datahora" name="hoje" size="50" disabled/></p>
+                <p><label>Nome: </label> <input type="text" id="nome" name="nome" maxlength="50" size="60" required /></p>
+                <p><label>e-mail: </label><input type="email" id="email" name="email" maxlength="50" size="60" autocomplete="on" required /></p>
+                <p><label>telefone: </label><input type="tel" id="telefone" name="telefone" maxlength="13" size="13"/></p>
+                <p><label>Idade: </label><input type="text" class="idade" name="idade" maxlength="3" size="3" onblur="MostraDiaSemana()" /></p>
+                <p>
+                    <label>Gênero: </label>
+                    <label for="m">M</label><input type="radio" id="m" name="genero" value="m" required/>
+                    <label for="f">F</label><input type="radio" id="f" name="genero" value="f" required/>
+                </p>
+            </fieldset>
+
+            <fieldset name="comentarios" form="faleconosco">
+                <legend>Comentários</legend>
+                    <p>
+                        <label>Indique quanto esse portal agradou: </label> 
+                        <input type="range" id="agradou" name="agradou" min="0" max="10" onClick="medidor()"/> 
+                        <meter id="medidor1" value="0" min="0" max="10">2 de 10</meter>
+                        <meter id="medidor2" value="0.0">60%</meter>  
+                    </p>
+                    
+                    <p>
+                        <label>Barra de progresso: </label> 
+                        <progress id="barraProgresso" value="0" max="100"></progress>
+                    </p>
+                    
+                    <p>
+                        <label>Qual seu estilo musical preferido? </label> 
+                        <select id="idEstilo" required>
+                            <option value="">Escolha uma opção...</option>
+                            <option value="Alternativa">Alternativa</option>
+                            <option value="Blues">Blues</option>
+                            <option value="Bossanova">Bossa Nova</option>
+                            <option value="Brega">Brega</option>
+                            <option value="Classica">Clássica</option>
+                            <option value="Country">Country</option>
+                            <option value="Disco">Disco</option>
+                            <option value="Doowop">Doo Wop</option>
+                            <option value="Edm">EDM</option>
+                            <option value="Erudita">Erudita</option>
+                            <option value="Folk">Folk</option>
+                            <option value="Forro">Forró</option>
+                            <option value="Funk">Funk</option>
+                            <option value="Gospel">Gospel</option>
+                            <option value="Hiphop">Hip-Hop</option>
+                            <option value="Indie">Indie</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Jpop">J-Pop</option>
+                            <option value="Kpop">K-Pop</option>
+                            <option value="Metal">Metal</option>
+                            <option value="Mpb">MPB</option>
+                            <option value="Pagode">Pagode</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Punk">Punk</option>
+                            <option value="Rap">Rap</option>
+                            <option value="Raprock">Rap-Rock</option>
+                            <option value="Reggae">Reggae</option>
+                            <option value="Rockgotico">Rock Gótico</option>
+                            <option value="Rocknacional">Rock Nacional</option>
+                            <option value="Reb">R&B</option>
+                            <option value="Samba">Samba</option>
+                            <option value="Sertanejo">Sertanejo</option>
+                            <option value="Ska">Ska</option>
+                            <option value="Soul">Soul</option>
+                            <option value="Tango">Tango</option>
+                            <option value="Trapmusic">Trap Music</option>
+                            <option value="Valsa">Valsa</option>
+                        </select>
+
+                        <select id="idEstiloComOptgroup">
+                            <optgroup label="Clássicos">
+                                <option value="Blues">Blues</option>
+                                <option value="Bossanova">Bossa Nova</option>
+                                <option value="Classica">Clássica</option>
+                                <option value="Country">Country</option>
+                                <option value="Erudita">Erudita</option>
+                                <option value="Folk">Folk</option>
+                                <option value="Forro">Forró</option>
+                                <option value="Funk">Funk</option>
+                                <option value="Gospel">Gospel</option>
+                                <option value="Jazz">Jazz</option>
+                                <option value="Metal">Metal</option>
+                                <option value="Mpb">MPB</option>
+                                <option value="Pagode">Pagode</option>
+                                <option value="Punk">Punk</option>
+                                <option value="Rap">Rap</option>
+                                <option value="Reggae">Reggae</option>
+                                <option value="Rocknacional">Rock Nacional</option>
+                                <option value="Samba">Samba</option>
+                                <option value="Sertanejo">Sertanejo</option>
+                                <option value="Soul">Soul</option>
+                                <option value="Tango">Tango</option>
+                                <option value="Valsa">Valsa</option>
+                            </optgroup>
+                                <optgroup label="Modernos">
+                                <option value="Alternativa">Alternativa</option>
+                                <option value="Brega">Brega</option>
+                                <option value="Disco">Disco</option>
+                                <option value="Doowop">Doo Wop</option>
+                                <option value="Edm">EDM</option>
+                                <option value="Hiphop">Hip-Hop</option>
+                                <option value="Indie">Indie</option>
+                                <option value="Jpop">J-Pop</option>
+                                <option value="Kpop">K-Pop</option>
+                                <option value="Pop">Pop</option>
+                                <option value="Raprock">Rap-Rock</option>
+                                <option value="Rockgotico">Rock Gótico</option>
+                                <option value="Reb">R&B</option>
+                                <option value="Ska">Ska</option>
+                                <option value="Trapmusic">Trap Music</option>
+                            </optgroup>
+                        </select>
+                        
+                        <input list="idEstiloComDatalist">
+
+                        <datalist id="idEstiloComDatalist">
+                            <option value="Alternativa"></option>
+                            <option value="Blues"></option>
+                            <option value="Bossanova"></option>
+                            <option value="Brega"></option>
+                            <option value="Classica"></option>
+                            <option value="Country"></option>
+                            <option value="Disco"></option>
+                            <option value="Doowop"></option>
+                            <option value="Edm"></option>
+                            <option value="Erudita"></option>
+                            <option value="Folk"></option>
+                            <option value="Forro"></option>
+                            <option value="Funk"></option>
+                            <option value="Gospel"></option>
+                            <option value="Hiphop"></option>
+                            <option value="Indie"></option>
+                            <option value="Jazz"></option>
+                            <option value="Jpop"></option>
+                            <option value="Kpop"></option>
+                            <option value="Metal"></option>
+                            <option value="Mpb"></option>
+                            <option value="Pagode"></option>
+                            <option value="Pop"></option>
+                            <option value="Punk"></option>
+                            <option value="Rap"></option>
+                            <option value="Raprock"></option>
+                            <option value="Reggae"></option>
+                            <option value="Rockgotico"></option>
+                            <option value="Rocknacional"></option>
+                            <option value="Reb"></option>
+                            <option value="Samba"></option>
+                            <option value="Sertanejo"></option>
+                            <option value="Ska"></option>
+                            <option value="Soul"></option>
+                            <option value="Tango"></option>
+                            <option value="Trapmusic"></option>
+                            <option value="Valsa"></option>
+                        </datalist>
+                    </p> 
+                <p>
+                    <label for="opiniao">Deixe <span style="color:white">aqui</span> 
+                        seus comentários: </label> 
+                   <textarea id="opiniao" name="comentario" cols=60 rows=10 
+                             maxlength="500" spellcheck="true"></textarea>
+                </p>
+            </fieldset>
+            
+            <div id="botoes">
+                <input type="reset" id="limpar" value="Limpar"/>
+                <input type="submit" id="enviar" value="Enviar" onClick="consiste()"
+                       onMouseOver="consisteCampos()"/>
+                
+            </div>
+            <div>
+                <input type="button" value="Captura conteúdo do campo pelo Id"
+                       onClick="pegaValorInputPeloId()"/>
+                <input type="button" value="Captura conteúdo do campo pelo Name"
+                       onClick="pegaValorInputPeloName()"/>
+                <input type="button" value="Captura conteúdo do campo pelo Nome da Classe"
+                       onClick="pegaValorInputPeloNomeDaClasse()"/>
+                <input type="button" value="Alterar valor do campo via JavaScript"
+                       onClick="mudaValorInput()"/>
+                
+            </div>
+        </form>
+   
+        <!-- Footer -->
+        <footer>
+        <br>
+        <br>
+        <p>
+            Copyrigth &copy; 2018 - All Rigths Reserved - <a href="index.html">WikiMusic</a><br>
+            Pagina desenvolvida na disciplina de DWA por Huandrio Avelino da Silva<br>
+            Instituto Federal de Educação, Ciência e Tecnologia de São Paulo  
+        </p>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WikiMusic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/menu.css" type="text/css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/ajaxestilo.js"></script>
+    <script>
+
+      $(window).load(function(){
+        buscaEstilos(listaEstilosNaTelaAdmin);
+      });
+
+    </script>
+  </head>
+
+  <body>
+    <!-- Cabeçalho-->
+    <figure class="logocontainer">
+        <a href="index.html"><img src="../img/logo_wikimusic.jpg" alt="logo"></a>
+        <figcaption id="slogan">Módulo Administrativo</figcaption>            
+    </figure>
+     
+    <nav id="topnav">
+        <ul>
+          <li><a href="index.html">Início</a></li>      
+          <li><a href="artista.html">Artistas</a></li>      
+          <li><a href="album.html">Álbuns</a></li>      
+          <li><a href="musica.html">Músicas</a></li>      
+        </ul>
+    </nav>
+      
+    <!-- Conteúdo -->
+    <div id="container">
+        <h1 id="titulo">Estilos Musicais</h1>
+        
+        <div id="botaoincluir">
+            <input type="button" value="Novo Estilo" onclick="abreFormEstilo()"/>  
+        </div>
+        
+        <div id="listDados"></div>
+        
+        <form id="form">
+            <p>
+              <label>Código: </label><input type="text" id="idEstilo" 
+                                            size="5" disabled/>
+            </p>
+            <p>
+              <label>Descrição: </label><input type="text" id="dsNome" 
+                                               size="50" required/>
+            </p>
+            <div>
+                <input type="button" value="Salvar" onclick="salvaEstilo()"/> 
+                <input type="button" value="Cancelar" onclick="cancela()" />
+            </div>
+        </form>
+        
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2018 - All Rights Reserved - WikiMusic</p>
+        <p><a href="http://cbt.ifsp.edu.br" target="_blank">Instituto Federal de Educação, Ciência e Tecnologia de São Paulo</a></p>
+    </footer>
+
+  </body>
+</html>

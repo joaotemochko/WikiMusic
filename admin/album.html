@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>WikiMusic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/menu.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/estilo.css" type="text/css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/ajaxalbum.js"></script>
+  </head>
+
+  <body onload="buscaAlbuns(listaAlbunsNaTelaAdmin)">
+    <!-- Cabeçalho-->
+    <figure class="logocontainer">
+        <a href="index.html"><img src="../img/logo_wikimusic.jpg" alt="logo"></a>
+        <figcaption id="legenda">Módulo Administrativo</figcaption>            
+    </figure>
+     
+    <nav id="topnav" style="margin-top:20px">
+        <ul>
+          <li><a href="index.html">Início</a></li>      
+          <li><a href="estilo.html">Estilos</a></li>      
+          <li><a href="artista.html">Artistas</a></li>      
+          <li><a href="musica.html">Músicas</a></li>      
+        </ul>
+    </nav>
+      
+    <!-- Conteúdo -->
+    <div id="container">
+        <h1>Álbuns</h1>
+        
+        <div id="botaoincluir">
+            <input type="button" value="Novo Álbum" onclick="abreFormAlbum()"/>  
+        </div>
+        
+        <div id="listDados"></div>
+        
+        <form id="form">
+            <p>
+              <label>Código: </label><input type="text" id="idAlbum" size="5" disabled/>
+            </p>
+            <p>
+              <label>Título: </label><input type="text" id="dsTitulo" size="50" required/>
+            </p>
+            <p>
+              <label>Lançamento: </label><input type="date" id="dtLancamento" size="10" required/>
+            </p>
+            <p>
+              <label>Imagem: </label><input type="text" id="dsImagem" size="50" required/>
+            </p>
+            <p>
+              <label>Artista: </label><select id="idArtista" name="idArtista"><option value="Escolha">Escolha uma opção...</option></select>
+            </p>
+            <p>
+              <label>Estilo: </label><select id="idEstilo" name="idEstilo"><option value="Escolha">Escolha uma opção...</option></select>
+            </p>
+            <div>
+                <input type="button" value="Salvar" onclick="salvaAlbum()"/> 
+                <input type="button" value="Cancelar" onclick="cancela()" />
+            </div>
+        </form>
+        
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2017 - All Rights Reserved - WikiMusic</p>
+        <p><a href="http://cbt.ifsp.edu.br" target="_blank">Instituto Federal de Educação, Ciência e Tecnologia de São Paulo</a></p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+header {
+    font-family: Verdana, Arial, sans-serif;
+    color: darkblue
+}
+#logo {
+    font-size: 325%;
+        margin-bottom:0;
+        text-decoration: underline
+}
+#slogan{
+    font-size: 115%;
+    margin-top: 0;
+    }
+#titulo{
+        font-size: 300%;
+        color:black;
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+
+body{margin-top: 20px;
+     margin-right: 50px;
+     margin-left: 50px;
+     background-color: whitesmoke;
+     color:gray;
+     text-align:justify
+}
+#referencia{
+    text-align: right
+}
+
+footer{
+    text-align: center;
+    color:blue    
+}
+
+
+

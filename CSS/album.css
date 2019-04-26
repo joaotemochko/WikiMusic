@@ -1,0 +1,25 @@
+@import url(estilo.css);
+
+.album {
+    margin: 0px 0px 30px 0px;
+    float: left; 
+}
+.album img {
+    margin: 0px 0px 0px 100px;
+    width: 200px; 
+    height: 200px;
+}
+.album figcaption {
+    font-family: Verdana, sans-serif;
+    font-size: 60%;
+    margin: 0px 0px 0px 100px;
+}
+article{
+    margin: 0px 0px 100px 0px;
+    padding:0; 
+}
+.musicas {
+    margin: 0px 0px 0px 330px;
+    font-family: Verdana, sans-serif;
+    font-size: 75%;
+}
