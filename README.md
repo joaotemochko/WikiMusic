@@ -1,7 +1,7 @@
 # WikiMusic
 Projeto Wiki Music, desenvolvido no curso de ADS no IFSP.
 
-----------ATENÇÃO-------------
+#ATENÇÃO
 
 O projeto foi criado por todos os alunos da 271, cada um com um estilo musical diferente. Mudanças somente na parte de estilos musicais, index, admin, fale conosco e propaganda são iguais para todos.
 Tema: Country.
